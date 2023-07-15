@@ -21,13 +21,16 @@ When ('I fill in the registration form with data from the  file and submit the f
 		userInfo.phoneNumber = generateRandomPhoneNumber();
 		identification.typeValidEmail(userInfo.email);
 		identification.clickContinueButton();
+		
 		createAccount.typeValidPassword(userInfo.password);
 		createAccount.confirmPassword(userInfo.password);
 		createAccount.clickContinueButtonInPasswordCard();
+		
 		createAccount.typeFirstName(userInfo.firstName);
 		createAccount.typeLastName(userInfo.lastName);
 		createAccount.typePhoneNumber(userInfo.phoneNumber);
 		createAccount.clickContinueButtonInProfileDetails();
+		
 		createAccount.selectGender(userInfo.gender);
 		createAccount.selectBirthDate(userInfo.birthDate);
 		createAccount.acceptTermAndConditions();
@@ -48,6 +51,7 @@ Given ('I am logged in to the Jumia website', ()=>{
 		homePage.NavigateToIdentificationPage();
 		identification.typeValidEmail(customerUserInfo.email);
 		identification.clickContinueButton();
+		
 		createAccount.typeValidPassword(customerUserInfo.password);
 		identification.clickContinueButton();
 		homePage.verifyLoginWelcomeLabel(customerUserInfo.firstName);
@@ -66,7 +70,6 @@ When ('I add {string} product to the cart', (productNumber)=>{
 	interceptAddToCart();
 	cy.viewport(1400,1400);
 	[...Array(parseInt(productNumber)).keys()].forEach((index) => {
-		console.log('index', index);
 		bakery.addToCartProductNumber(index);
 		common.verifyProductIsAddedToCart(index);
 	});
