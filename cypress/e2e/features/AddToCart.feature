@@ -1,15 +1,15 @@
-
+@task
 Feature: Jumia website
 
         Background: Visit jumia website
             Given I am on the Jumia website
 
-
+    
         Scenario: 01 Creating a new account
              When I navigate to identification page
               And I fill in the registration form with data from the  file and submit the form
              Then I should be redirected to the Home page
-
+    
         Scenario: 02 Adding items to the cart
             Given I am logged in to the Jumia website
              When I hover over the supermarket menu
