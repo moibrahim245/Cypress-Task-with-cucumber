@@ -4,7 +4,8 @@
   "description": "cucumber ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy_open": "npx cypress open",
+    "create_Account":"npx cypress run --env tags='@task' "
   },
   "keywords": [
     "cypress"
@@ -20,6 +21,7 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
     "stepDefinitions": "cypress/e2e/steps"
+    
   },
   "dependencies": {
     "jquery": "^3.7.0"
