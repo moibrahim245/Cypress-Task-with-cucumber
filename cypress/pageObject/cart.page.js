@@ -19,8 +19,6 @@ class Cart{
 					.eq(1)
 					.invoke('text')
 					.then(productNum2 => {
-						console.log('productNum1', productNum1);
-						console.log('productNum2', productNum2);
 						const actualSubtotal = parseFloat(productNum1.replace(/EGP/g, '')) + parseFloat(productNum2.replace(/EGP/g, ''));
 						this.subtotal().invoke('text').then(expectedSubtotal=>{
 							console.log('expectedSubtotal', expectedSubtotal);
