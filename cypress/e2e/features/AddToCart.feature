@@ -7,7 +7,7 @@ Feature: Jumia website
     
         Scenario: 01 Creating a new account
              When I navigate to identification page
-              And I fill in the registration form with data from the  file and submit the form
+              And I fill in the registration form and submit the form
              Then I should be redirected to the Home page
     
         Scenario: 02 Adding items to the cart
